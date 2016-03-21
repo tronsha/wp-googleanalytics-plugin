@@ -18,30 +18,30 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-function mpcx_googleanalytics_register_setting() {
+function mpcx_google_analytics_register_setting() {
 	register_setting(
-		'mpcx_googleanalytics',
+		'mpcx_google_analytics',
 		'google_analytics_id'
 	);
 }
 
-function mpcx_googleanalytics_add_options_page() {
+function mpcx_google_analytics_add_options_page() {
 	add_options_page(
 		'Google Analytics',
 		'Google Analytics',
 		'manage_options',
 		'googleanalytics',
-		'mpcx_googleanalytics_admin_options'
+		'mpcx_google_analytics_admin_options'
 	);
 }
 
-function mpcx_googleanalytics_admin_options() {
+function mpcx_google_analytics_admin_options() {
 	include plugin_dir_path( __FILE__ ) . 'admin/options.php';
 }
 
 if ( is_admin() ) {
-	add_action( 'admin_init', 'mpcx_googleanalytics_register_setting' );
-	add_action( 'admin_menu', 'mpcx_googleanalytics_add_options_page' );
+	add_action( 'admin_init', 'mpcx_google_analytics_register_setting' );
+	add_action( 'admin_menu', 'mpcx_google_analytics_add_options_page' );
 }
 
 if ( ! is_admin() ) {
