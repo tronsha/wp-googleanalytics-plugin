@@ -12,11 +12,11 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 <h1>Google Analytics</h1>
 <form method="post" action="options.php">
 <?php wp_nonce_field( 'update-options' ); ?>
-<?php settings_fields( 'mpcx_google_analytics' ); ?>
+<?php settings_fields( 'mpcx_googleanalytics' ); ?>
 <table class="form-table">
 <tr>
-<th scope="row"><label for="google_analytics_id">Google Analytics ID:</label></th>
-<td><input type="text" id="google_analytics_id" name="google_analytics_id" value="<?php echo get_option( 'google_analytics_id' ); ?>"></td>
+<th scope="row"><label for="google_analytics_tracking_id">Tracking ID:</label></th>
+<td><input type="text" id="google_analytics_tracking_id" name="google_analytics_tracking_id" value="<?php echo get_option( 'google_analytics_tracking_id' ); ?>"></td>
 </tr>
 </table>
 <p class="submit">

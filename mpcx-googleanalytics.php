@@ -8,7 +8,7 @@
  * Plugin Name:       MPCX Google Analytics
  * Plugin URI:        https://github.com/tronsha/wp-googleanalytics-plugin
  * Description:       Just Another Google Analytics Plugin
- * Version:           0.9.0
+ * Version:           0.9.1
  * Author:            Stefan Hüsges
  * Author URI:        http://www.mpcx.net/
  * Copyright:         Stefan Hüsges
@@ -21,14 +21,14 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 register_activation_hook(
 	__FILE__,
 	function () {
-		add_option( 'google_analytics_id', 'UA-0000000-0' );
+		add_option( 'google_analytics_tracking_id', 'UA-0000000-0' );
 	}
 );
 
 register_deactivation_hook(
 	__FILE__,
 	function () {
-		delete_option( 'google_analytics_id' );
+		delete_option( 'google_analytics_tracking_id' );
 	}
 );
 
@@ -38,8 +38,8 @@ if ( is_admin() ) {
 		'admin_init',
 		function () {
 			register_setting(
-				'mpcx_google_analytics',
-				'google_analytics_id'
+				'mpcx_googleanalytics',
+				'google_analytics_tracking_id'
 			);
 		}
 	);
@@ -72,7 +72,7 @@ if ( ! is_admin() ) {
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', '" . get_option( 'google_analytics_id' ) . "', 'auto');
+  ga('create', '" . get_option( 'google_analytics_tracking_id' ) . "', 'auto');
   ga('set', 'anonymizeIp', true);
   ga('send', 'pageview');
 </script>
