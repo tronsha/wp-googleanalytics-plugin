@@ -7,9 +7,9 @@ Stable tag: 1.0.1
 License: MIT
 License URI: https://raw.githubusercontent.com/tronsha/wp-googleanalytics-plugin/master/LICENSE
 
-== Description ==
+Google Analytics with Anonymize IP
 
-Google Analytics with Anonymize IP.
+== Description ==
 
 [Source Code on GitHub](https://github.com/tronsha/wp-googleanalytics-plugin)
 
