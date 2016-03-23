@@ -7,8 +7,8 @@
  * @wordpress-plugin
  * Plugin Name:       Google Analytics
  * Plugin URI:        https://github.com/tronsha/wp-googleanalytics-plugin
- * Description:       Google Analytics with Anonymize IP
- * Version:           1.0.0
+ * Description:       Google Analytics with Anonymize IP.
+ * Version:           1.0.1
  * Author:            Stefan Hüsges
  * Author URI:        http://www.mpcx.net/
  * Copyright:         Stefan Hüsges
@@ -57,6 +57,23 @@ if ( is_admin() ) {
 				}
 			);
 		}
+	);
+
+	add_filter(
+		'plugin_action_links',
+		function ( $actions, $plugin_file ) {
+			static $plugin;
+			if ( ! isset( $plugin ) ) {
+				$plugin = plugin_basename( __FILE__ );
+			}
+			if ( $plugin == $plugin_file ) {
+				$settings = array('settings' => '<a href="options-general.php?page=googleanalytics">' . __( 'Settings', 'General' ) . '</a>');
+				$actions  = array_merge( $settings, $actions );
+			}
+			return $actions;
+		},
+		10,
+		5
 	);
 
 }
