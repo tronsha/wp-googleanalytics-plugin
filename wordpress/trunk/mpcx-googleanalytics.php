@@ -8,7 +8,7 @@
  * Plugin Name:       Google Analytics
  * Plugin URI:        https://github.com/tronsha/wp-googleanalytics-plugin
  * Description:       Google Analytics with Anonymize IP.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Stefan Hüsges
  * Author URI:        http://www.mpcx.net/
  * Copyright:         Stefan Hüsges
@@ -67,9 +67,10 @@ if ( is_admin() ) {
 				$plugin = plugin_basename( __FILE__ );
 			}
 			if ( $plugin == $plugin_file ) {
-				$settings = array('settings' => '<a href="options-general.php?page=googleanalytics">' . __( 'Settings', 'General' ) . '</a>');
+				$settings = array( 'settings' => '<a href="options-general.php?page=googleanalytics">' . __( 'Settings', 'General' ) . '</a>' );
 				$actions  = array_merge( $settings, $actions );
 			}
+
 			return $actions;
 		},
 		10,
@@ -83,17 +84,20 @@ if ( ! is_admin() ) {
 	add_action(
 		'wp_head',
 		function () {
-			echo "
+			$trackingId = get_option( 'google_analytics_tracking_id' );
+			if ( empty( $trackingId ) === false && $trackingId !== 'UA-0000000-0' ) {
+				echo "
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', '" . get_option( 'google_analytics_tracking_id' ) . "', 'auto');
+  ga('create', '" . $trackingId . "', 'auto');
   ga('set', 'anonymizeIp', true);
   ga('send', 'pageview');
 </script>
 ";
+			}
 		}
 	);
 

@@ -3,7 +3,7 @@ Contributors: DeusTron
 Tags: googleanalytics, anonymizeip, anonymize, google, analytics, datenschutz, plugin
 Requires at least: 4.0
 Tested up to: 4.5
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: MIT
 License URI: https://raw.githubusercontent.com/tronsha/wp-googleanalytics-plugin/master/LICENSE
 
