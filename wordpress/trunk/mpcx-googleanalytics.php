@@ -5,10 +5,10 @@
  * @package           wp-googleanalytics-plugin
  *
  * @wordpress-plugin
- * Plugin Name:       MPCX Google Analytics
+ * Plugin Name:       Google Analytics
  * Plugin URI:        https://github.com/tronsha/wp-googleanalytics-plugin
- * Description:       Just Another Google Analytics Plugin
- * Version:           0.9.1
+ * Description:       Google Analytics with Anonymize IP
+ * Version:           1.0.0
  * Author:            Stefan Hüsges
  * Author URI:        http://www.mpcx.net/
  * Copyright:         Stefan Hüsges
