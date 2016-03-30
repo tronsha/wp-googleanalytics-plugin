@@ -3,13 +3,15 @@ Contributors: DeusTron
 Tags: google analytics, googleanalytics, google, analytics, anonymize ip, anonymizeip, anonymize, ip, tracking id, tracking, id, ga, datenschutz, javascript, js, plugin
 Requires at least: 4.0
 Tested up to: 4.5
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: MIT
 License URI: https://raw.githubusercontent.com/tronsha/wp-googleanalytics-plugin/master/LICENSE
 
 Google Analytics with Anonymize IP
 
 == Description ==
+
+This plugin adds the script for google analytics to the HTML code.
 
 [Source Code on GitHub](https://github.com/tronsha/wp-googleanalytics-plugin)
 
