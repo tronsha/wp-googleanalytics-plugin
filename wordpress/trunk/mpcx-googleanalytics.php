@@ -86,11 +86,9 @@ if ( ! is_admin() ) {
 		function () {
 			$trackingId = get_option( 'google_analytics_tracking_id' );
 			if ( empty( $trackingId ) === false && $trackingId !== 'UA-0000000-0' ) {
-				echo str_replace(
-					'%trackingId%',
-					$trackingId,
-					file_get_contents( plugin_dir_path( __FILE__ ) . 'script.tpl' )
-				);
+				$javascript = file_get_contents( plugin_dir_path( __FILE__ ) . 'ga.js' );
+				$html = str_replace( 'UA-0000000-0', $trackingId, '<script>' . $javascript . '</script>' );
+				echo $html;
 			}
 		}
 	);
