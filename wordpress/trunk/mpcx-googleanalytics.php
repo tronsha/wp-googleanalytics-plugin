@@ -97,7 +97,7 @@ if ( ! is_admin() ) {
 	add_shortcode(
 		'gaoptout',
 		function () {
-			return '<a href="javascript:gaOptout()">' . __('Click here to opt-out of Google Analytics', 'mpcx-googleanalytics') . '</a>';
+			return '<a href="javascript:gaOptout()">' . __( 'Click here to opt-out of Google Analytics' ) . '</a>';
 		}
 	);
 
