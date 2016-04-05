@@ -10,6 +10,12 @@ WordPress Google Analytics Plugin
 
 :package: [WordPress Plugins][5]
 
+## Info
+
+* [Google Analytics][6]
+* [IP Anonymization][7]
+* [User Opt-out][8]
+
 ## Creator
 
 **Stefan Hüsges**
@@ -27,3 +33,6 @@ WordPress Google Analytics Plugin
 [3]: https://wordpress.org/about/requirements/
 [4]: http://php.net/
 [5]: https://wordpress.org/plugins/mpcx-googleanalytics/
+[6]: https://www.google.com/analytics/
+[7]: https://developers.google.com/analytics/devguides/collection/analyticsjs/ip-anonymization
+[8]: https://developers.google.com/analytics/devguides/collection/analyticsjs/user-opt-out
