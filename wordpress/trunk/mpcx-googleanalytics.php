@@ -87,9 +87,9 @@ if ( ! is_admin() ) {
 			$trackingId = get_option( 'google_analytics_tracking_id' );
 			if ( empty( $trackingId ) === false && $trackingId !== 'UA-0000000-0' ) {
 				$optoutJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/optout.js' );
-				echo "<script>" . str_replace( 'UA-0000000-0', $trackingId, $optoutJs ) . "</script>\n";
+				echo "<script>\n" . str_replace( 'UA-0000000-0', $trackingId, $optoutJs ) . "</script>\n";
 				$analyticsJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/analytics.js' );
-				echo "<script>" . str_replace( 'UA-0000000-0', $trackingId, $analyticsJs ) . "</script>\n";
+				echo "<script>\n" . str_replace( 'UA-0000000-0', $trackingId, $analyticsJs ) . "</script>\n";
 			}
 		}
 	);
