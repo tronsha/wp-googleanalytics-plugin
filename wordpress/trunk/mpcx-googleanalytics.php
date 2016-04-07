@@ -96,8 +96,9 @@ if ( ! is_admin() ) {
 
 	add_shortcode(
 		'gaoptout',
-		function () {
-			return '<a href="javascript:gaOptout()">' . __( 'Click here to opt-out of Google Analytics' ) . '</a>';
+		function ( $att = array(), $content = null ) {
+			$text = empty($content) ? __( 'Click here to opt-out of Google Analytics' ) : $content;
+			return '<a href="javascript:gaOptout()">' . $text . '</a>';
 		}
 	);
 
