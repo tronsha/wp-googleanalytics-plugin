@@ -85,11 +85,11 @@ if ( ! is_admin() ) {
 		'wp_head',
 		function () {
 			$trackingId = get_option( 'google_analytics_tracking_id' );
-			if ( empty( $trackingId ) === false && $trackingId !== 'UA-0000000-0' ) {
+			if ( empty( $trackingId ) === false && $trackingId !== 'UA-0000000-0' && $trackingId !== 'UA-XXXXX-Y' ) {
 				$optoutJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/optout.js' );
-				echo "<script>\n" . str_replace( 'UA-0000000-0', $trackingId, $optoutJs ) . "</script>\n";
+				echo "<script>\n" . str_replace( 'UA-XXXXX-Y', $trackingId, $optoutJs ) . "</script>\n";
 				$analyticsJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/analytics.js' );
-				echo "<script>\n" . str_replace( 'UA-0000000-0', $trackingId, $analyticsJs ) . "</script>\n";
+				echo "<script>\n" . str_replace( 'UA-XXXXX-Y', $trackingId, $analyticsJs ) . "</script>\n";
 			}
 		}
 	);

@@ -1,4 +1,4 @@
-var gaProperty = 'UA-0000000-0';
+var gaProperty = 'UA-XXXXX-Y';
 var disableStr = 'ga-disable-' + gaProperty;
 if (document.cookie.indexOf(disableStr + '=true') > -1) {
     window[disableStr] = true;
