@@ -8,7 +8,7 @@
  * Plugin Name:       Google Analytics
  * Plugin URI:        https://github.com/tronsha/wp-googleanalytics-plugin
  * Description:       Google Analytics with Anonymize IP.
- * Version:           1.0.8
+ * Version:           1.0.9
  * Author:            Stefan Hüsges
  * Author URI:        http://www.mpcx.net/
  * Copyright:         Stefan Hüsges
@@ -22,6 +22,7 @@ register_activation_hook(
 	__FILE__,
 	function () {
 		add_option( 'google_analytics_tracking_id', 'UA-0000000-0' );
+		add_option( 'google_analytics_opt_out', '0' );
 	}
 );
 
@@ -29,6 +30,7 @@ register_deactivation_hook(
 	__FILE__,
 	function () {
 		delete_option( 'google_analytics_tracking_id' );
+		delete_option( 'google_analytics_opt_out' );
 	}
 );
 
@@ -40,6 +42,10 @@ if ( is_admin() ) {
 			register_setting(
 				'mpcx_googleanalytics',
 				'google_analytics_tracking_id'
+			);
+			register_setting(
+				'mpcx_googleanalytics',
+				'google_analytics_opt_out'
 			);
 		}
 	);
@@ -86,8 +92,10 @@ if ( ! is_admin() ) {
 		function () {
 			$trackingId = get_option( 'google_analytics_tracking_id' );
 			if ( empty( $trackingId ) === false && $trackingId !== 'UA-0000000-0' && $trackingId !== 'UA-XXXXX-Y' ) {
-				$optoutJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/optout.js' );
-				echo "<script>\n" . str_replace( 'UA-XXXXX-Y', $trackingId, $optoutJs ) . "</script>\n";
+				if ( get_option( 'google_analytics_opt_out' ) == 1 ) {
+					$optoutJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/optout.js' );
+					echo "<script>\n" . str_replace( 'UA-XXXXX-Y', $trackingId, $optoutJs ) . "</script>\n";
+				}
 				$analyticsJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/analytics.js' );
 				echo "<script>\n" . str_replace( 'UA-XXXXX-Y', $trackingId, $analyticsJs ) . "</script>\n";
 			}
