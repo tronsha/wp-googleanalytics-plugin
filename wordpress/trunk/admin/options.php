@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 <table class="form-table">
 <tr>
 <th scope="row"><label for="google_analytics_tracking_id">Tracking ID:</label></th>
-<td><input type="text" id="google_analytics_tracking_id" name="google_analytics_tracking_id" value="<?php echo get_option( 'google_analytics_tracking_id' ); ?>"></td>
+<td><input type="text" id="google_analytics_tracking_id" name="google_analytics_tracking_id" value="<?php echo get_option( 'google_analytics_tracking_id' ); ?>"> <a href="https://support.google.com/analytics/answer/1032385" target="_blank"><sup>?</sup></a></td>
 </tr>
 <tr>
 <th scope="row"><label for="google_analytics_opt_out">User Opt-out:</label></th>
