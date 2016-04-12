@@ -3,7 +3,7 @@ Contributors: DeusTron
 Tags: google analytics, googleanalytics, google, analytics, anonymization, anonymize ip, anonymizeip, anonymize, ip, tracking id, tracking, id, ga, gaoptout, opt-out, optout, cookie, opt-out-cookie, datenschutz, shortcode, javascript, js, plugin
 Requires at least: 4.0
 Tested up to: 4.5
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 License: MIT
 License URI: https://raw.githubusercontent.com/tronsha/wp-googleanalytics-plugin/master/LICENSE
 
@@ -25,15 +25,15 @@ The Plugin requires PHP 5.3.2 or newer.
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 1. Go to "Settings" -> "Google Analytics" and enter your Google Analytics Tracking ID there.
 
+== Frequently Asked Questions ==
+
+= Where can I find the Tracking ID? =
+
+<a href="https://support.google.com/analytics/answer/1032385">Find your tracking code, tracking ID, and property number</a>
+
 == Changelog ==
 
-= 1.0.9 =
-* added user opt-out to admin area
-
-= 1.0.8 =
-* added changelog
-
-= 1.0.7 =
+= 1.1.0 =
 * added user opt-out
 
 = 1.0.0 =
