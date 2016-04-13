@@ -23,8 +23,6 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 <td><input type="checkbox" id="google_analytics_opt_out" name="google_analytics_opt_out" value="1"<?php checked( get_option( 'google_analytics_opt_out' ), 1 ); ?>></td>
 </tr>
 </table>
-<p class="submit">
-<input type="submit" class="button-primary" value="<?php _e( 'Save Changes' ) ?>">
-</p>
+<?php submit_button(); ?>
 </form>
 </div>
