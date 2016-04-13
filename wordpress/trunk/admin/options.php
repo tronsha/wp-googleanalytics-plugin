@@ -11,7 +11,6 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 <div class="wrap">
 <h1>Google Analytics</h1>
 <form method="post" action="options.php">
-<?php wp_nonce_field( 'update-options' ); ?>
 <?php settings_fields( 'mpcx_googleanalytics' ); ?>
 <table class="form-table">
 <tr>
