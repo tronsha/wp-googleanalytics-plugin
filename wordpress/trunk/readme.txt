@@ -3,7 +3,7 @@ Contributors: DeusTron
 Tags: google analytics, googleanalytics, google, analytics, anonymization, anonymize ip, anonymizeip, anonymize, ip, tracking id, tracking, id, ga, gaoptout, opt-out, optout, cookie, opt-out-cookie, datenschutz, shortcode, javascript, js, plugin
 Requires at least: 4.0
 Tested up to: 4.5
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: MIT
 License URI: https://raw.githubusercontent.com/tronsha/wp-googleanalytics-plugin/master/LICENSE
 

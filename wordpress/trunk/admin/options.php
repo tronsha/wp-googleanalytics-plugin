@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 </tr>
 <tr>
 <th scope="row"><label for="google_analytics_opt_out">User Opt-out:</label></th>
-<td><input type="checkbox" id="google_analytics_opt_out" name="google_analytics_opt_out" value="1"<?php echo get_option( 'google_analytics_opt_out' ) == 1 ? ' checked' : ''; ?>></td>
+<td><input type="checkbox" id="google_analytics_opt_out" name="google_analytics_opt_out" value="1"<?php checked( get_option( 'google_analytics_opt_out' ), 1 ); ?>></td>
 </tr>
 </table>
 <p class="submit">
