@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Google Analytics\n"
+"POT-Creation-Date: 2016-11-02 08:25+0100\n"
+"PO-Revision-Date: 2016-11-02 08:25+0100\n"
+"Last-Translator: \n"
+"Language-Team: Stefan Hüsges\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/options.php:17
+msgid "Tracking ID"
+msgstr ""
+
+#: admin/options.php:21
+msgid "User Opt-out"
+msgstr ""
+
+#: mpcx-googleanalytics.php:78
+msgid "Settings"
+msgstr ""
+
+#: mpcx-googleanalytics.php:112
+msgid "Click here to opt-out of Google Analytics"
+msgstr ""

@@ -8,7 +8,7 @@
  * Plugin Name:       Google Analytics
  * Plugin URI:        https://github.com/tronsha/wp-googleanalytics-plugin
  * Description:       Google Analytics with Anonymize IP.
- * Version:           1.1.3
+ * Version:           1.1.4
  * Author:            Stefan Hüsges
  * Author URI:        http://www.mpcx.net/
  * Copyright:         Stefan Hüsges
@@ -17,6 +17,8 @@
  */
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
+load_plugin_textdomain( 'mpcx-googleanalytics', false, dirname( plugin_basename( __FILE__ ) ) . '/localization' );
 
 register_activation_hook(
 	__FILE__,
@@ -73,7 +75,7 @@ if ( is_admin() ) {
 				$plugin = plugin_basename( __FILE__ );
 			}
 			if ( $plugin == $plugin_file ) {
-				$settings = array( 'settings' => '<a href="options-general.php?page=googleanalytics">' . __( 'Settings', 'General' ) . '</a>' );
+				$settings = array( 'settings' => '<a href="options-general.php?page=googleanalytics">' . __( 'Settings', 'mpcx-googleanalytics' ) . '</a>' );
 				$actions  = array_merge( $settings, $actions );
 			}
 
@@ -107,7 +109,7 @@ if ( ! is_admin() ) {
 	add_shortcode(
 		'gaoptout',
 		function ( $att = array(), $content = null ) {
-			$text = empty($content) ? __( 'Click here to opt-out of Google Analytics' ) : $content;
+			$text = empty($content) ? __( 'Click here to opt-out of Google Analytics', 'mpcx-googleanalytics' ) : $content;
 			return '<a href="javascript:gaOptout()">' . $text . '</a>';
 		}
 	);
