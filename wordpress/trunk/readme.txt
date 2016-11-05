@@ -4,7 +4,7 @@ Donate link: http://www.mpcx.net/wordpress/donate/
 Tags: google analytics, googleanalytics, google, analytics, anonymization, anonymize ip, anonymizeip, anonymize, ip, tracking id, tracking, id, ga, gaoptout, opt-out, optout, cookie, opt-out-cookie, datenschutz, shortcode, javascript, js, plugin
 Requires at least: 4.0
 Tested up to: 4.6
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: MIT
 License URI: https://raw.githubusercontent.com/tronsha/wp-googleanalytics-plugin/master/LICENSE
 
@@ -33,6 +33,9 @@ The Plugin requires PHP 5.3.2 or newer.
 <a href="https://support.google.com/analytics/answer/1032385">Find your tracking code, tracking ID, and property number</a>
 
 == Changelog ==
+
+= 1.1.4 =
+* added german translation
 
 = 1.1.0 =
 * added user opt-out
