@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Google Analytics\n"
-"POT-Creation-Date: 2016-11-02 08:25+0100\n"
+"POT-Creation-Date: 2016-12-01 16:19+0100\n"
 "PO-Revision-Date: 2016-11-02 08:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: Stefan Hüsges\n"
@@ -15,18 +16,27 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/options.php:17
+#: admin/options.php:18
 msgid "Tracking ID"
 msgstr ""
 
-#: admin/options.php:21
+#: admin/options.php:23
+msgid "Enter your Google Analytics Tracking ID"
+msgstr ""
+
+#: admin/options.php:28
 msgid "User Opt-out"
 msgstr ""
 
-#: mpcx-googleanalytics.php:78
+#: admin/options.php:32
+#, php-format
+msgid "Select the checkbox if you want to use the shortcode %s."
+msgstr ""
+
+#: mpcx-googleanalytics.php:80
 msgid "Settings"
 msgstr ""
 
-#: mpcx-googleanalytics.php:112
+#: mpcx-googleanalytics.php:114
 msgid "Click here to opt-out of Google Analytics"
 msgstr ""
