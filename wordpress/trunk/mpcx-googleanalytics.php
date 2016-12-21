@@ -111,7 +111,8 @@ if ( ! is_admin() ) {
 	add_shortcode(
 		'gaoptout',
 		function ( $att = array(), $content = null ) {
-			$text = empty($content) ? __( 'Click here to opt-out of Google Analytics', 'mpcx-googleanalytics' ) : $content;
+			$text = empty( $content ) ? __( 'Click here to opt-out of Google Analytics', 'mpcx-googleanalytics' ) : $content;
+
 			return '<a href="javascript:gaOptout()">' . $text . '</a>';
 		}
 	);
