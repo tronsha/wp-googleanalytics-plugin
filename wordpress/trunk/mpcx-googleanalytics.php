@@ -95,7 +95,7 @@ if ( ! is_admin() ) {
 		'wp_head',
 		function () {
 			$trackingId = get_option( 'google_analytics_tracking_id' );
-			if ( empty( $trackingId ) === false && $trackingId !== 'UA-0000000-0' && $trackingId !== 'UA-XXXXX-Y' ) {
+			if ( false === empty( $trackingId ) && 'UA-0000000-0' !== $trackingId && 'UA-XXXXX-Y' !== $trackingId ) {
 				if ( get_option( 'google_analytics_opt_out' ) == 1 ) {
 					$optoutJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/optout.js' );
 					echo "<script>\n" . str_replace( 'UA-XXXXX-Y', $trackingId, $optoutJs ) . "</script>\n";
