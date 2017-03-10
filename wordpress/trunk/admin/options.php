@@ -25,6 +25,16 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 		</tr>
 		<tr>
 			<th scope="row">
+				<label for="google_analytics_display_features"><?php _e( 'Remarketing', 'mpcx-googleanalytics' ); ?>:</label>
+			</th>
+			<td>
+				<input type="checkbox" id="google_analytics_display_features" name="google_analytics_display_features" value="1"<?php checked( get_option( 'google_analytics_display_features' ), 1 ); ?> />
+				<a href="https://support.google.com/analytics/answer/2444872" target="_blank"><sup>?</sup></a>
+				<p class="description" id="google_analytics_display_features-description"><?php printf( __( 'Select the checkbox if you want to enable remarketing and advertising reporting.', 'mpcx-googleanalytics' ) ); ?></p>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
 				<label for="google_analytics_opt_out"><?php _e( 'User Opt-out', 'mpcx-googleanalytics' ); ?>:</label>
 			</th>
 			<td>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Google Analytics\n"
-"POT-Creation-Date: 2016-12-01 16:19+0100\n"
-"PO-Revision-Date: 2016-12-01 16:21+0100\n"
+"POT-Creation-Date: 2017-03-09 14:50+0100\n"
+"PO-Revision-Date: 2017-03-09 14:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: Stefan Hüsges\n"
 "Language: de_DE\n"
@@ -24,21 +24,30 @@ msgid "Enter your Google Analytics Tracking ID"
 msgstr "Geben Sie Ihre Google Analytics Tracking ID ein"
 
 #: admin/options.php:28
+msgid "Remarketing"
+msgstr "Remarketing"
+
+#: admin/options.php:33
+msgid ""
+"Select the checkbox if you want to enable remarketing and advertising "
+"reporting."
+msgstr ""
+"Wählen Sie die Checkbox aus, wenn Sie Remarketing und Funktionen für  "
+"Werbeberichte in Analytics aktivieren wollen."
+
+#: admin/options.php:38
 msgid "User Opt-out"
 msgstr "User Opt-out"
 
-#: admin/options.php:32
+#: admin/options.php:42
 #, php-format
 msgid "Select the checkbox if you want to use the shortcode %s."
 msgstr "Wählen Sie die Checkbox aus, wenn Sie den Shortcode %s nutzen wollen."
 
-#: mpcx-googleanalytics.php:80
+#: mpcx-googleanalytics.php:77
 msgid "Settings"
 msgstr "Einstellungen"
 
 #: mpcx-googleanalytics.php:114
 msgid "Click here to opt-out of Google Analytics"
 msgstr "Klicken Sie hier um Google Analytics zu deaktivieren"
-
-#~ msgid "The checkbox enables the Shortcode"
-#~ msgstr "Die Checkbox aktiviert den Shortcode"

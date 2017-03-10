@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Google Analytics\n"
-"POT-Creation-Date: 2016-12-01 16:19+0100\n"
+"POT-Creation-Date: 2017-03-09 14:50+0100\n"
 "PO-Revision-Date: 2016-11-02 08:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: Stefan Hüsges\n"
@@ -25,15 +25,23 @@ msgid "Enter your Google Analytics Tracking ID"
 msgstr ""
 
 #: admin/options.php:28
+msgid "Remarketing"
+msgstr ""
+
+#: admin/options.php:33
+msgid "Select the checkbox if you want to enable remarketing and advertising reporting."
+msgstr ""
+
+#: admin/options.php:38
 msgid "User Opt-out"
 msgstr ""
 
-#: admin/options.php:32
+#: admin/options.php:42
 #, php-format
 msgid "Select the checkbox if you want to use the shortcode %s."
 msgstr ""
 
-#: mpcx-googleanalytics.php:80
+#: mpcx-googleanalytics.php:77
 msgid "Settings"
 msgstr ""
 

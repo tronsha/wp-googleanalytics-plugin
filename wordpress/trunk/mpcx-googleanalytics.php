@@ -26,7 +26,8 @@ register_activation_hook(
 	__FILE__,
 	function () {
 		add_option( 'google_analytics_tracking_id', 'UA-0000000-0' );
-		add_option( 'google_analytics_opt_out', '0' );
+		add_option( 'google_analytics_display_features', '' );
+		add_option( 'google_analytics_opt_out', '' );
 	}
 );
 
@@ -38,6 +39,10 @@ if ( is_admin() ) {
 			register_setting(
 				'mpcx_googleanalytics',
 				'google_analytics_tracking_id'
+			);
+			register_setting(
+				'mpcx_googleanalytics',
+				'google_analytics_display_features'
 			);
 			register_setting(
 				'mpcx_googleanalytics',
@@ -88,11 +93,14 @@ if ( ! is_admin() ) {
 		function () {
 			$trackingId = get_option( 'google_analytics_tracking_id' );
 			if ( false === empty( $trackingId ) && 'UA-0000000-0' !== $trackingId && 'UA-XXXXX-Y' !== $trackingId ) {
-				if ( get_option( 'google_analytics_opt_out' ) == 1 ) {
+				if ( '1' === get_option( 'google_analytics_opt_out' ) ) {
 					$optoutJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/optout.js' );
 					echo "<script>\n" . str_replace( 'UA-XXXXX-Y', $trackingId, $optoutJs ) . "</script>\n";
 				}
 				$analyticsJs = file_get_contents( plugin_dir_path( __FILE__ ) . 'public/js/analytics.js' );
+				if ( '1' !== get_option( 'google_analytics_display_features' ) ) {
+					$analyticsJs = str_replace( "  ga('require', 'displayfeatures');\n", '', $analyticsJs );
+				}
 				echo "<!-- Google Analytics -->\n";
 				echo "<script>\n" . str_replace( 'UA-XXXXX-Y', $trackingId, $analyticsJs ) . "</script>\n";
 				echo "<!-- End Google Analytics -->\n";

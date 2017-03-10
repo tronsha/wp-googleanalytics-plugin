@@ -1,7 +1,7 @@
 === Google Analytics ===
 Contributors: DeusTron
 Donate link: http://www.mpcx.net/wordpress/donate/
-Tags: google analytics, googleanalytics, google, analytics, anonymization, anonymize ip, anonymizeip, anonymize, ip, tracking id, tracking, id, ga, gaoptout, opt-out, optout, cookie, opt-out-cookie, datenschutz, shortcode, javascript, js, plugin
+Tags: google analytics, googleanalytics, google, analytics, anonymization, anonymize ip, anonymizeip, anonymize, ip, tracking id, tracking, id, ga, gaoptout, opt-out, optout, cookie, opt-out-cookie, datenschutz, shortcode, javascript, js, plugin, remarketing, display features, advertising reporting
 Requires at least: 4.0
 Tested up to: 4.7
 Stable tag: 1.1.5
@@ -35,6 +35,7 @@ The Plugin requires PHP 5.3.2 or newer.
 == Changelog ==
 
 = 1.1.5 =
+* added support for remarketing
 
 = 1.1.4 =
 * added german translation
