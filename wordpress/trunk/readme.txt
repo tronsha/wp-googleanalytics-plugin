@@ -32,6 +32,10 @@ The Plugin requires PHP 5.3.2 or newer.
 
 <a href="https://support.google.com/analytics/answer/1032385">Find your tracking code, tracking ID, and property number</a>
 
+== Screenshots ==
+
+1. Backend
+
 == Changelog ==
 
 = 1.1.5 =
