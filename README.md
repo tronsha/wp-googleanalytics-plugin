@@ -1,4 +1,4 @@
-WordPress Google Analytics Plugin
+WordPress GA Plugin
 =================================
 
 ## Requirements
